@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidencias - Plataforma - Cat Time</title>
+    <link rel="stylesheet" href="inicio.css">
+    <style>
+        /* Estilos específicos corregidos para Evidencias */
+        .visor-imagenes {
+            margin-top: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            width: 100%;
+            max-width: 100%;
+            background: rgba(31, 41, 55, 0.85);
+            border: 2px solid #a259ff;
+            border-radius: 18px;
+            padding: 15px;
+            box-shadow: 0 0 25px rgba(162, 89, 255, 0.4);
+            backdrop-filter: blur(10px);
+            z-index: 2;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .item-evidencia {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Estilo especial para la Evidencia 3 (Video) para aprovechar mucho mejor el espacio */
+        .item-evidencia.vertical {
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+
+        .item-evidencia.vertical video {
+            width: 100% !important;
+            max-width: 500px !important;
+            max-height: 480px !important;
+            height: auto !important;
+        }
+
+        .item-evidencia.vertical .cuadro-texto-evidencia {
+            width: 100% !important;
+            max-width: 100% !important;
+            max-height: 200px !important;
+        }
+
+        .item-evidencia img,
+        .item-evidencia video {
+            display: block !important;
+            flex: 1;
+            min-width: 0;
+            width: 50%;
+            max-width: 50%;
+            max-height: 450px;
+            height: auto;
+            border-radius: 12px;
+            object-fit: contain;
+            border: 1px solid #a259ff;
+            background: #000;
+        }
+
+        .cuadro-texto-evidencia {
+            flex: 1;
+            min-width: 0;
+            width: 50%;
+            background: rgba(17, 24, 39, 0.95);
+            border: 1px solid #a259ff;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: left;
+            box-shadow: 0 0 15px rgba(162, 89, 255, 0.3);
+            max-height: 450px;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        .cuadro-texto-evidencia p {
+            font-size: 0.9rem !important;
+            line-height: 1.4 !important;
+            color: #f5f9ff !important;
+            margin-bottom: 10px !important;
+        }
+
+        @media (max-width: 768px) {
+            .item-evidencia {
+                flex-direction: column !important;
+            }
+
+            .item-evidencia img,
+            .item-evidencia video,
+            .cuadro-texto-evidencia {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="pagina"
+            style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+
+            <div class="marca">CAT TIME<span>.</span></div>
+
+            <!-- BANNER MOTIVADOR -->
+            <div
+                style="flex: 1; max-width: 550px; margin: 0 20px; padding: 12px 20px; background: linear-gradient(135deg, rgba(162, 89, 255, 0.3), rgba(42, 157, 143, 0.3)); border: 3px solid #a259ff; border-radius: 14px; text-align: center; box-shadow: 0 5px 20px rgba(162, 89, 255, 0.4); min-height: 50px; display: flex; align-items: center; justify-content: center;">
+                <p id="fraseMotivadora"
+                    style="color: #fff; font-size: 1rem; font-weight: bold; margin: 0; letter-spacing: 0.5px; transition: opacity 0.5s ease-in-out;">
+                    ✨ "El éxito es la suma de pequeños esfuerzos repetidos día tras día." ✨
+                </p>
+            </div>
+
+            <ul class="menu-lineal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quiensomos.html">Quién Somos</a></li>
+                <li><a href="evidencias.html" class="active">Evidencias</a></li>
+                <li><a href="st.html">ST</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="logo-derecha">
+                <img src="Sin título-1.png" alt="Logotipo de la empresa" width="200" height="100" loading="lazy">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="decoracion-fondo">
+            <div class="circulo-brillo brillo-1"></div>
+            <div class="circulo-brillo brillo-2"></div>
+        </div>
+
+        <div class="contenedor-pagina" style="margin-top: 20px;">
+            <div class="columna-texto"
+                style="border: 3px solid rgba(162, 89, 255, 0.4); padding: 30px; border-radius: 20px; background: rgba(23, 18, 39, 0.7);">
+                <span class="badge-tag">Manejo del Tiempo</span>
+                <h1>¿Por qué es <span>Importante?</span></h1>
+                <p>Es una habilidad esencial para cualquier estudiante que desee alcanzar un buen rendimiento
+                </p>
+
+                <div class="botones-imagenes-vertical">
+                    <button type="button" onclick="mostrarImagen(1)">Evidencia 1</button>
+                    <button type="button" onclick="mostrarImagen(2)">Evidencia 2</button>
+                    <button type="button" onclick="mostrarImagen(3)">Evidencia 3</button>
+                    <button type="button" onclick="mostrarImagen(4)">Evidencia 4</button>
+                    <button type="button" onclick="mostrarImagen(5)">Evidencia 5</button>
+                    <button type="button" onclick="mostrarImagen(6)">Evidencia 6</button>
+                </div>
+            </div>
+
+            <div class="columna-imagen"
+                style="border: 3px solid rgba(162, 89, 255, 0.4); padding: 30px; border-radius: 20px; background: rgba(23, 18, 39, 0.7); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div class="tarjeta-flotante tf-1">
+                    <span class="icono">ℹ️</span>
+                    <div>
+                        <strong>Información</strong>
+                    </div>
+                </div>
+
+                <div class="tarjeta-flotante tf-2">
+                    <span class="icono">🎯</span>
+                    <div>
+                        <strong>Metas</strong>
+                        <p>Cat Time</p>
+                    </div>
+                </div>
+
+                <img src="AM.png" alt="Modelo 3D del gato" class="img-gato" loading="lazy">
+
+                <div id="contenedor" class="visor-imagenes">
+                    <div id="item1" class="item-evidencia" style="display:flex;">
+                        <img src="evidencia 1.jpg" alt="Evidencia 1">
+                        <div class="cuadro-texto-evidencia">
+                            <p>Realizamos esta actividad para conocer la carga académica y las materias que más se les
+                                dificultan a los estudiantes. La intención era saber cuáles eran sus dificultades en las
+                                diferentes asignaturas. Entre los 50 semáforos realizados, encontramos que Inglés es una
+                                de las materias que más se les dificulta, ya que algunos estudiantes no la entienden o
+                                simplemente no les gusta. Por otro lado, las materias que más les gustan son Matemáticas
+                                y Filosofía, porque algunos estudiantes las entienden y se les facilitan más.
+                            </p>
+                            <p>También pudimos darnos cuenta de que la dificultad no siempre depende de la materia, sino
+                                que puede estar relacionada con la forma en que el profesor explica. Algunos estudiantes
+                                sienten que no entienden las explicaciones, mientras que otros consideran que el
+                                profesor explica de una manera que les facilita aprender.</p>
+                        </div>
+                    </div>
+                    <div id="item2" class="item-evidencia" style="display:none;">
+                        <img src="evidencia 2.jpg" alt="Evidencia 2">
+                        <div class="cuadro-texto-evidencia">
+                            <p>A partir de las 24 respuestas de la encuesta, pudimos identificar que los estudiantes
+                                tienen algunas dificultades para organizar y manejar sus tareas. Aunque la mayoría
+                                considera que las tareas afectan poco su tiempo libre, varios sienten estrés a veces y
+                                reconocen que su rendimiento puede bajar cuando tienen muchas tareas.</p>
+                            <p>También encontramos que algunos estudiantes utilizan listas o anotaciones para
+                                organizarse y evitar olvidar sus trabajos. Además, una de las principales propuestas fue
+                                distribuir las tareas durante la semana, para evitar que se acumulen en un mismo día.
+                                Esto demuestra que mejorar la organización y la distribución de las actividades podría
+                                ayudar.</p>
+                        </div>
+                    </div>
+                    <div id="item3" class="item-evidencia vertical" style="display:none;">
+                        <video controls src="evidencia 3.mp4"></video>
+                        <div class="cuadro-texto-evidencia">
+                            <p>Este instrumento fue desarrollado para comprender los hábitos de los estudiantes fuera
+                                del entorno escolar. Los hallazgos revelan que un alto porcentaje de jóvenes malgasta su
+                                tiempo libre en el uso improductivo del teléfono móvil. Asimismo, manifiestan que la
+                                falta de herramientas adecuadas les impide estructurar sus jornadas, señalando que
+                                contar con una aplicación especializada les permitiría optimizar su organización
+                                persona.</p>
+                            <p>Para dar solución a esta problemática, se creó una aplicación con un enfoque lúdico y
+                                gamificado. Esta plataforma permite a los estudiantes planificar su tiempo de manera
+                                dinámica, aprovechar sus periodos de descanso y mantener un equilibrio saludable frente
+                                a su carga académica.</p>
+                        </div>
+                    </div>
+                    <div id="item4" class="item-evidencia" style="display:none;">
+                        <img src="evidencia4.jpeg" alt="Evidencia 4">
+                        <div class="cuadro-texto-evidencia">
+                            <p>Realizamos esta actividad con la intención de conocer cómo los estudiantes distribuyen su
+                                tiempo durante el día y qué cantidad de horas dedican a actividades que no están
+                                relacionadas directamente con el colegio.</p>
+                            <p>Buscamos comprender cómo organizan el tiempo que tienen disponible después de sus
+                                actividades académicas y conocer qué otras actividades hacen durante el día.
+                            </p>
+                            <p>A partir de la información recopilada, encontramos que existen diferencias entre los
+                                estudiantes, ya que algunos dedican aproximadamente 2,9 horas a estas actividades,
+                                mientras que otros llegan a dedicar más de 5 horas.</p>
+                            <p>También pudimos darnos cuenta de que cada estudiante tiene una forma diferente de
+                                distribuir sus horas y que algunas actividades pueden ocupar una parte importante de su
+                                día.</p>
+                            <p>Esto nos permitió identificar que la dificultad para organizar el tiempo no depende
+                                únicamente de las tareas, sino también de cómo los estudiantes distribuyen las
+                                diferentes actividades de su vida diaria y buscan equilibrarlas con el estudio, el
+                                descanso y su tiempo libre.</p>
+                        </div>
+                    </div>
+                    <div id="item5" class="item-evidencia" style="display:none;">
+                        <img src="evidencia 5.jpeg" alt="Evidencia 5">
+                        <div class="cuadro-texto-evidencia">
+                            <p>Explicación de la actividad: Realidad o mito<br>
+                                La actividad se realizó con los estudiantes de grado décimo como parte del proyecto de
+                                gestión y manejo del tiempo, con el propósito de reflexionar sobre los hábitos y las
+                                creencias que pueden influir en la organización de las actividades académicas y
+                                personales.</p>
+                            <p>Durante la dinámica, se presentaron diferentes afirmaciones relacionadas con el manejo
+                                del tiempo, la procrastinación, la organización de las tareas y los hábitos de estudio,
+                                que los estudiantes debían clasificar como realidad o mito.</p>
+                            <p>Para desarrollar la actividad, los estudiantes analizaron cada afirmación y escribieron
+                                sus respuestas según lo que consideraban correcto. De esta manera, pudieron expresar sus
+                                conocimientos, compartir sus opiniones y reflexionar sobre situaciones que se presentan
+                                frecuentemente en su vida escolar, como dejar las tareas para última hora, pensar que
+                                trabajar bajo presión es más efectivo o creer que no es necesario planificar las
+                                actividades para cumplir con las responsabilidades académicas.</p>
+                        </div>
+                    </div>
+                    <div id="item6" class="item-evidencia" style="display:none;">
+                        <img src="evidencia 6.jpeg" alt="Evidencia 6">
+                        <div class="cuadro-texto-evidencia">
+                            <p>A través de este juego de matemáticas, pude comprender los conceptos y operaciones
+                                básicas de una manera mucho más clara, dinámica y entretenida. La dinámica del juego
+                                hizo que repasar los fundamentos matemáticos no fuera aburrido, sino un reto que me
+                                motivó a practicar y a perderle el miedo a la materia. Siento que este enfoque práctico
+                                me ayudó a reforzar las bases que necesitaba para resolver problemas con mayor rapidez y
+                                confianza</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function mostrarImagen(num) {
+            for (let i = 1; i <= 6; i++) {
+                const item = document.getElementById("item" + i);
+                if (item) item.style.display = "none";
+            }
+            const itemActivo = document.getElementById("item" + num);
+            if (itemActivo) itemActivo.style.display = "flex";
+        }
+
+        const frases = [
+            "✨ \"El éxito es la suma de pequeños esfuerzos repetidos día tras día.\" ✨",
+            "🚀 \"Las matemáticas no son números, ecuaciones o fórmulas; es sobre entender.\" 🚀",
+            "💡 \"Organiza tu tiempo hoy para construir el futuro que deseas mañana.\" 💡",
+            "⭐ \"El único límite a nuestros logros de mañana son nuestras dudas de hoy.\" ⭐",
+            "🎯 \"Cada problema matemático resuelto es una victoria para tu mente.\" 🎯",
+            "🔥 \"La constancia y el esfuerzo vencen al talento cuando el talento no se esfuerza.\" 🔥",
+            "🧠 \"Nunca consideres el estudio como una obligación, sino como una oportunidad.\" 🧠",
+            "💪 \"Un pequeño avance cada día suma grandes resultados al final.\" 💪",
+            "🌟 \"El talento te abre puertas, pero tu disciplina te mantiene en la cima.\" 🌟",
+            "🎮 \"Haz que aprender sea tan divertido como jugar en tu mundo favorito.\" 🎮"
+        ];
+
+        let indiceActual = 0;
+        const elementoFrase = document.getElementById("fraseMotivadora");
+
+        function cambiarFrase() {
+            elementoFrase.style.opacity = 0;
+            setTimeout(() => {
+                indiceActual = (indiceActual + 1) % frases.length;
+                elementoFrase.textContent = frases[indiceActual];
+                elementoFrase.style.opacity = 1;
+            }, 500);
+        }
+
+        setInterval(cambiarFrase, 5000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Plataforma - Cat Time</title>
+    <link rel="stylesheet" href="inicio.css">
+    <style>
+        /* Estilos específicos responsivos para las Hojas de Vida en Contacto */
+        .tarjeta-hoja-vida {
+            background: #171227;
+            border: 3px solid #a259ff;
+            border-radius: 24px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .columna-hoja-izq {
+            width: 350px;
+            background: rgba(162, 89, 255, 0.08);
+            padding: 35px 25px;
+            border-right: 2px solid rgba(162, 89, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .tarjeta-hoja-vida {
+                flex-direction: column !important;
+            }
+
+            .columna-hoja-izq {
+                width: 100% !important;
+                border-right: none !important;
+                border-bottom: 2px solid rgba(162, 89, 255, 0.3);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="pagina"
+            style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+
+            <div class="marca">CAT TIME<span>.</span></div>
+
+            <!-- BANNER MOTIVADOR SUPERIOR -->
+            <div
+                style="flex: 1; max-width: 550px; margin: 0 20px; padding: 12px 20px; background: linear-gradient(135deg, rgba(162, 89, 255, 0.3), rgba(42, 157, 143, 0.3)); border: 3px solid #a259ff; border-radius: 14px; text-align: center; box-shadow: 0 5px 20px rgba(162, 89, 255, 0.4); min-height: 50px; display: flex; align-items: center; justify-content: center;">
+                <p id="fraseMotivadora"
+                    style="color: #fff; font-size: 1rem; font-weight: bold; margin: 0; letter-spacing: 0.5px; transition: opacity 0.5s ease-in-out;">
+                    ✨ "El éxito es la suma de pequeños esfuerzos repetidos día tras día." ✨
+                </p>
+            </div>
+
+            <ul class="menu-lineal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quiensomos.html">Quién Somos</a></li>
+                <li><a href="evidencias.html">Evidencias</a></li>
+                <li><a href="st.html">ST</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+
+            <div class="logo-derecha">
+                <img src="Sin título-1.png" alt="Logotipo de la empresa" width="200" height="100" loading="lazy">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="decoracion-fondo">
+            <div class="circulo-brillo brillo-1"></div>
+            <div class="circulo-brillo brillo-2"></div>
+        </div>
+
+        <div style="max-width: 1050px; margin: 30px auto 40px auto; padding: 20px;">
+
+            <!-- TÍTULO LIMPIO SIN MARCO -->
+            <div style="margin-bottom: 40px; text-align: center; padding: 10px;">
+                <span
+                    style="background: rgba(162, 89, 255, 0.2); color: #c77dff; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">Equipo
+                    de Trabajo</span>
+                <h1 style="font-size: 2.8rem; margin: 12px 0; color: #fff;">Hojas de Vida y <span>Contacto</span></h1>
+                <p style="color: #b3b3b3; font-size: 1.05rem;">Conoce la trayectoria de los creadores del proyecto Cat
+                    Time.</p>
+            </div>
+
+            <!-- CONTENEDOR GENERAL DE LAS HOJAS DE VIDA -->
+            <div style="display: flex; flex-direction: column; gap: 50px;">
+
+                <!-- HOJA DE VIDA 1: JADER PENNA -->
+                <div class="tarjeta-hoja-vida">
+                    <div class="columna-hoja-izq">
+                        <img src="yo.jpeg" alt="Jader Penna"
+                            style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #a259ff; margin-bottom: 20px; box-shadow: 0 0 15px rgba(162,89,255,0.4);">
+                        <h2 style="color: #fff; font-size: 1.8rem; margin: 0 0 5px 0; line-height: 1.2;">Jader Penna
+                        </h2>
+                        <p style="color: #c77dff; font-weight: bold; font-size: 1rem; margin-bottom: 20px;">
+                            Desarrollador / Creador</p>
+
+                        <div
+                            style="width: 100%; text-align: left; font-size: 0.82rem; color: #ddd; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px;">
+                            <p
+                                style="text-transform: uppercase; font-weight: bold; color: #c77dff; margin-bottom: 8px;">
+                                Datos Personales</p>
+                            <p style="margin: 4px 0;"><strong>Nacimiento:</strong> 13 de junio 2008, Argentina</p>
+                            <p style="margin: 4px 0;"><strong>Cédula:</strong> 1080262066</p>
+                            <p style="margin: 4px 0;"><strong>Sexo:</strong> Masculino</p>
+                            <p style="margin: 4px 0;"><strong>Estado Civil:</strong> Soltero</p>
+                            <p style="margin: 4px 0;"><strong>Dirección:</strong> Colegio Venecia, Bogotá</p>
+                            <p style="margin: 4px 0;"><strong>Teléfono:</strong> 3132231613</p>
+                            <p style="margin: 4px 0;"><strong>E-mail:</strong> jaderpenna03@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="flex: 1; padding: 35px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3
+                                style="color: #a259ff; font-size: 1.3rem; margin-top: 0; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px;">
+                                Perfil Profesional</h3>
+                            <p style="color: #bbb; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">
+                                Soy una persona responsable, puntual, creativa y con muy buena disposición para
+                                cualquier tarea que se me asigne. Tengo experiencia en desarrollo web y gestión del
+                                proyecto Cat Time. Me interesa principalmente trabajar en proyectos con un nivel de
+                                innovación alto y un enfoque social.
+                            </p>
+
+                            <h3
+                                style="color: #a259ff; font-size: 1.3rem; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px;">
+                                Formación Académica</h3>
+                            <div
+                                style="margin-bottom: 12px; border: 1px solid rgba(162, 89, 255, 0.2); padding: 8px; border-radius: 8px;">
+                                <p style="color: #fff; font-weight: bold; margin: 0; font-size: 0.9rem;">COLEGIO VENECIA
+                                    | BACHILLERATO ACADÉMICO</p>
+                                <p style="color: #888; font-size: 0.8rem; margin: 2px 0 0 0;">2025</p>
+                            </div>
+                            <div
+                                style="margin-bottom: 20px; border: 1px solid rgba(162, 89, 255, 0.2); padding: 8px; border-radius: 8px;">
+                                <p style="color: #fff; font-weight: bold; margin: 0; font-size: 0.9rem;">PLATAFORMA CAT
+                                    TIME | DESARROLLO WEB Y GESTIÓN</p>
+                                <p style="color: #888; font-size: 0.8rem; margin: 2px 0 0 0;">En curso</p>
+                            </div>
+
+                            <h3
+                                style="color: #a259ff; font-size: 1.3rem; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px;">
+                                Habilidades</h3>
+                            <ul
+                                style="color: #bbb; font-size: 0.9rem; margin: 0; padding-left: 20px; line-height: 1.5;">
+                                <li>Creación de herramientas de planificación y horarios de estudio.</li>
+                                <li>Desarrollo web y estructuración técnica del proyecto.</li>
+                                <li>Apoyo en matemáticas y resolución de problemas básicos.</li>
+                            </ul>
+                        </div>
+
+                        <!-- CÓDIGOS QR EXTRA GRANDES (220px) -->
+                        <div
+                            style="margin-top: 25px; border-top: 2px dashed rgba(162, 89, 255, 0.4); padding-top: 20px; text-align: center;">
+                            <p
+                                style="color: #fff; font-size: 0.95rem; font-weight: bold; text-transform: uppercase; margin: 0 0 15px 0; letter-spacing: 1px;">
+                                Códigos QR de Acceso</p>
+
+                            <div
+                                style="display: flex; gap: 30px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                                <div
+                                    style="text-align: center; border: 3px solid #a259ff; padding: 12px; border-radius: 16px; background: rgba(0,0,0,0.3); box-shadow: 0 0 20px rgba(162,89,255,0.3);">
+                                    <img src="cat time.jpeg" alt="Cat Time"
+                                        style="width: 220px; height: 220px; background: #fff; border-radius: 8px; padding: 6px; display: block;">
+                                    <p
+                                        style="color: #ffb703; font-size: 1.1rem; font-weight: bold; margin: 10px 0 0 0;">
+                                        Cat Time</p>
+                                </div>
+                                <div
+                                    style="text-align: center; border: 3px solid #e1306c; padding: 12px; border-radius: 16px; background: rgba(0,0,0,0.3); box-shadow: 0 0 20px rgba(225,48,108,0.3);">
+                                    <img src="ig mio.jpeg" alt="Instagram"
+                                        style="width: 220px; height: 220px; background: #fff; border-radius: 8px; padding: 6px; display: block;">
+                                    <p
+                                        style="color: #e1306c; font-size: 1.1rem; font-weight: bold; margin: 10px 0 0 0;">
+                                        Instagram Jader</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HOJA DE VIDA 2: CAMILA GRACIANO -->
+                <div class="tarjeta-hoja-vida">
+                    <div class="columna-hoja-izq">
+                        <img src="camila.jpeg" alt="Camila Graciano"
+                            style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #a259ff; margin-bottom: 20px; box-shadow: 0 0 15px rgba(162,89,255,0.4);">
+                        <h2 style="color: #fff; font-size: 1.8rem; margin: 0 0 5px 0; line-height: 1.2;">Camila Graciano
+                        </h2>
+                        <p style="color: #c77dff; font-weight: bold; font-size: 1rem; margin-bottom: 20px;">
+                            Desarrolladora / Creadora</p>
+
+                        <div
+                            style="width: 100%; text-align: left; font-size: 0.82rem; color: #ddd; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px;">
+                            <p
+                                style="text-transform: uppercase; font-weight: bold; color: #c77dff; margin-bottom: 8px;">
+                                Datos Personales</p>
+                            <p style="margin: 4px 0;"><strong>Nacimiento:</strong> 27 de Marzo del 2008</p>
+                            <p style="margin: 4px 0;"><strong>Cédula:</strong> 1026563617</p>
+                            <p style="margin: 4px 0;"><strong>Sexo:</strong> Femenino</p>
+                            <p style="margin: 4px 0;"><strong>Estado Civil:</strong> Soltera</p>
+                            <p style="margin: 4px 0;"><strong>Dirección:</strong> Colegio Venecia, Bogotá</p>
+                            <p style="margin: 4px 0;"><strong>Teléfono:</strong> 3209962939</p>
+                            <p style="margin: 4px 0;"><strong>E-mail:</strong> mgraciano384@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="flex: 1; padding: 35px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3
+                                style="color: #a259ff; font-size: 1.3rem; margin-top: 0; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px;">
+                                Perfil Profesional</h3>
+                            <p style="color: #bbb; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">
+                                Soy una persona responsable, puntual, analítica y con excelente disposición para la
+                                investigación y recopilación de datos. Tengo experiencia en el estudio de hábitos y
+                                reducción de ansiedad académica. Me interesa participar en proyectos con un nivel de
+                                innovación alto y un enfoque social.
+                            </p>
+
+                            <h3
+                                style="color: #a259ff; font-size: 1.3rem; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px;">
+                                Formación Académica</h3>
+                            <div
+                                style="margin-bottom: 12px; border: 1px solid rgba(162, 89, 255, 0.2); padding: 8px; border-radius: 8px;">
+                                <p style="color: #fff; font-weight: bold; margin: 0; font-size: 0.9rem;">COLEGIO VENECIA
+                                    | BACHILLERATO ACADÉMICO</p>
+                                <p style="color: #888; font-size: 0.8rem; margin: 2px 0 0 0;">2025</p>
+                            </div>
+                            <div
+                                style="margin-bottom: 20px; border: 1px solid rgba(162, 89, 255, 0.2); padding: 8px; border-radius: 8px;">
+                                <p style="color: #fff; font-weight: bold; margin: 0; font-size: 0.9rem;">PROYECTO CAT
+                                    TIME | INVESTIGACIÓN Y ENCUESTAS</p>
+                                <p style="color: #888; font-size: 0.8rem; margin: 2px 0 0 0;">En curso</p>
+                            </div>
+
+                            <h3
+                                style="color: #a259ff; font-size: 1.3rem; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px;">
+                                Habilidades</h3>
+                            <ul
+                                style="color: #bbb; font-size: 0.9rem; margin: 0; padding-left: 20px; line-height: 1.5;">
+                                <li>Creación de encuestas y registros de tiempo estudiantil.</li>
+                                <li>Fomento de hábitos saludables y reducción de ansiedad.</li>
+                                <li>Organización y estructuración de contenidos del proyecto.</li>
+                            </ul>
+                        </div>
+
+                        <!-- CÓDIGOS QR EXTRA GRANDES (220px) -->
+                        <div
+                            style="margin-top: 25px; border-top: 2px dashed rgba(162, 89, 255, 0.4); padding-top: 20px; text-align: center;">
+                            <p
+                                style="color: #fff; font-size: 0.95rem; font-weight: bold; text-transform: uppercase; margin: 0 0 15px 0; letter-spacing: 1px;">
+                                Códigos QR de Acceso</p>
+
+                            <div
+                                style="display: flex; gap: 30px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                                <div
+                                    style="text-align: center; border: 3px solid #a259ff; padding: 12px; border-radius: 16px; background: rgba(0,0,0,0.3); box-shadow: 0 0 20px rgba(162,89,255,0.3);">
+                                    <img src="cat time.jpeg" alt="Cat Time"
+                                        style="width: 220px; height: 220px; background: #fff; border-radius: 8px; padding: 6px; display: block;">
+                                    <p
+                                        style="color: #ffb703; font-size: 1.1rem; font-weight: bold; margin: 10px 0 0 0;">
+                                        Cat Time</p>
+                                </div>
+                                <div
+                                    style="text-align: center; border: 3px solid #e1306c; padding: 12px; border-radius: 16px; background: rgba(0,0,0,0.3); box-shadow: 0 0 20px rgba(225,48,108,0.3);">
+                                    <img src="ig ella.jpeg" alt="Instagram"
+                                        style="width: 220px; height: 220px; background: #fff; border-radius: 8px; padding: 6px; display: block;">
+                                    <p
+                                        style="color: #e1306c; font-size: 1.1rem; font-weight: bold; margin: 10px 0 0 0;">
+                                        Instagram Camila</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const frases = [
+            "✨ \"El éxito es la suma de pequeños esfuerzos repetidos día tras día.\" ✨",
+            "🚀 \"Las matemáticas no son números, ecuaciones o fórmulas; es sobre entender.\" 🚀",
+            "💡 \"Organiza tu tiempo hoy para construir el futuro que deseas mañana.\" 💡",
+            "⭐ \"El único límite a nuestros logros de mañana son nuestras dudas de hoy.\" ⭐",
+            "🎯 \"Cada problema matemático resuelto es una victoria para tu mente.\" 🎯",
+            "🔥 \"La constancia y el esfuerzo vencen al talento cuando el talento no se esfuerza.\" 🔥",
+            "🧠 \"Nunca consideres el estudio como una obligación, sino como una oportunidad.\" 🧠",
+            "💪 \"Un pequeño avance cada día suma grandes resultados al final.\" 💪",
+            "🌟 \"El talento te abre puertas, pero tu disciplina te mantiene en la cima.\" 🌟",
+            "🎮 \"Haz que aprender sea tan divertido como jugar en tu mundo favorito.\" 🎮"
+        ];
+
+        let indiceActual = 0;
+        const elementoFrase = document.getElementById("fraseMotivadora");
+
+        function cambiarFrase() {
+            elementoFrase.style.opacity = 0;
+            setTimeout(() => {
+                indiceActual = (indiceActual + 1) % frases.length;
+                elementoFrase.textContent = frases[indiceActual];
+                elementoFrase.style.opacity = 1;
+            }, 500);
+        }
+
+        setInterval(cambiarFrase, 5000);
+    </script>
+</body>
+
+</html>

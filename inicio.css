@@ -1,0 +1,414 @@
+:root {
+    --fresh-purple: #8e44ad;
+    --azul-hielo: #00b4d8;
+    --verde-lima: #70e000;
+    --bg-dark: #111827;
+    --bg-card: #1f2937;
+    --text-light: #f5f9ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(31, 41, 55, 0.95);
+    border-bottom: 3px solid var(--fresh-purple);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.pagina {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    gap: 2rem;
+}
+
+.marca {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--azul-hielo);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.marca span {
+    color: var(--verde-lima);
+}
+
+.menu-lineal {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    margin-left: auto;
+}
+
+.menu-lineal a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 0.6rem 1rem;
+    border-radius: 60px;
+    transition: all 0.3s ease;
+}
+
+.menu-lineal li:nth-child(odd) a:hover {
+    color: var(--azul-hielo);
+    text-shadow: 0 0 8px var(--azul-hielo);
+}
+
+.menu-lineal li:nth-child(even) a:hover {
+    color: var(--verde-lima);
+    text-shadow: 0 0 8px var(--verde-lima);
+}
+
+.menu-lineal a.active {
+    color: #000000;
+    background-color: var(--verde-lima);
+    font-weight: bold;
+    box-shadow: 0 0 15px var(--verde-lima), 0 0 5px var(--verde-lima);
+}
+
+.logo-derecha {
+    display: flex;
+    align-items: center;
+}
+
+.logo-derecha img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+main {
+    flex: 1;
+    max-width: 1400px;
+    margin: 1.5rem auto;
+    padding: 0 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.contenedor-pagina {
+    background-color: transparent;
+    padding: 1rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.columna-texto {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.decoracion-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.circulo-brillo {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.3;
+}
+
+.brillo-1 {
+    width: 320px;
+    height: 320px;
+    background-color: var(--fresh-purple);
+    top: -50px;
+    left: -50px;
+}
+
+.brillo-2 {
+    width: 350px;
+    height: 350px;
+    background-color: var(--azul-hielo);
+    bottom: -50px;
+    right: -50px;
+}
+
+.badge-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(142, 68, 173, 0.2);
+    border: 1px solid var(--fresh-purple);
+    color: var(--text-light);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+h1 span {
+    color: var(--fresh-purple);
+}
+
+p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    max-width: 100%;
+}
+
+.botones-imagenes-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 320px;
+}
+
+.botones-imagenes-vertical button {
+    width: 100%;
+    padding: 10px 16px;
+    background: rgba(31, 41, 55, 0.85);
+    color: var(--text-light);
+    border: 1px solid var(--fresh-purple);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.botones-imagenes-vertical button:hover {
+    background-color: var(--fresh-purple);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(142, 68, 173, 0.5);
+}
+
+.columna-imagen {
+    position: relative;
+    flex: 1.4;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+    width: 100%;
+}
+
+.columna-imagen img:not(.img-gato) {
+    max-width: 100% !important;
+    max-height: 1500px !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 16px;
+    margin: 0 auto;
+}
+
+.columna-imagen .img-gato {
+    max-width: 90px !important;
+    height: auto !important;
+    animation: flotar 3s ease-in-out infinite;
+    margin-bottom: 5px;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.tarjeta-flotante {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: rgba(31, 41, 55, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 4;
+}
+
+.tarjeta-flotante .icono {
+    font-size: 1.2rem;
+}
+
+.tarjeta-flotante strong {
+    display: block;
+    color: var(--verde-lima);
+    font-size: 0.8rem;
+}
+
+.tarjeta-flotante p {
+    margin: 0;
+    font-size: 0.7rem;
+    color: var(--text-light);
+}
+
+.tf-1 {
+    top: -10px;
+    left: -10px;
+}
+
+.tf-2 {
+    top: 40px;
+    right: -10px;
+}
+
+.visor-imagenes {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    background: rgba(31, 41, 55, 0.85);
+    border: 2px solid var(--fresh-purple);
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 0 25px rgba(142, 68, 173, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* ========================================== */
+/* ESTILOS PARA LA SECCIÓN DE DOCUMENTOS PDF */
+/* ========================================== */
+.documento-pdf {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+    background: rgba(23, 18, 39, 0.7);
+    border: 3px solid rgba(162, 89, 255, 0.4);
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+.documento-pdf h2 {
+    color: var(--azul-hielo);
+    margin-bottom: 15px;
+}
+.documento-pdf p {
+    color: var(--text-light);
+}
+.tarjeta-pdf {
+    background: rgba(31, 41, 55, 0.9);
+    max-width: 450px;
+    margin: 25px auto 0 auto;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 2px solid var(--fresh-purple);
+}
+.icono-pdf {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+.tarjeta-pdf h3 {
+    color: var(--azul-hielo);
+    margin-bottom: 10px;
+}
+.botones-pdf {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+.btn-pdf {
+    background: #1769aa;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+.btn-pdf:hover {
+    background: #104c7a;
+}
+.descargar {
+    background: #238653;
+}
+.descargar:hover {
+    background: #17613b;
+}
+
+/* ========================================== */
+/* MEDIA QUERIES RESPONSIVAS (MÓVILES)        */
+/* ========================================== */
+@media (max-width: 900px) {
+    .pagina {
+        flex-direction: column !important;
+        gap: 15px;
+        padding: 1rem !important;
+    }
+    .menu-lineal {
+        margin-left: 0 !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    div[style*="max-width: 550px"] {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 5px 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-pagina {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    .columna-texto, 
+    .columna-imagen {
+        width: 100% !important;
+    }
+    h1 {
+        font-size: 2.2rem !important;
+    }
+}

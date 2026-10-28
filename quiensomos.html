@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quién Somos - Plataforma - Cat Time</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+
+<body>
+    <header>
+        <nav class="pagina"
+            style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            <div class="marca">CAT TIME<span>.</span></div>
+
+            <!-- BANNER MOTIVADOR -->
+            <div
+                style="flex: 1; max-width: 550px; margin: 0 20px; padding: 12px 20px; background: linear-gradient(135deg, rgba(162, 89, 255, 0.3), rgba(42, 157, 143, 0.3)); border: 3px solid #a259ff; border-radius: 14px; text-align: center; box-shadow: 0 5px 20px rgba(162, 89, 255, 0.4); min-height: 50px; display: flex; align-items: center; justify-content: center;">
+                <p id="fraseMotivadora"
+                    style="color: #fff; font-size: 1rem; font-weight: bold; margin: 0; letter-spacing: 0.5px; transition: opacity 0.5s ease-in-out;">
+                    ✨ "El éxito es la suma de pequeños esfuerzos repetidos día tras día." ✨
+                </p>
+            </div>
+
+            <ul class="menu-lineal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quiensomos.html" class="active">Quién Somos</a></li>
+                <li><a href="evidencias.html">Evidencias</a></li>
+                <li><a href="st.html">ST</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="logo-derecha">
+                <img src="Sin título-1.png" alt="Logotipo de la empresa" width="200" height="100" loading="lazy">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="decoracion-fondo">
+            <div class="circulo-brillo brillo-1"></div>
+            <div class="circulo-brillo brillo-2"></div>
+        </div>
+
+        <div class="contenedor-pagina" style="margin-top: 20px;">
+
+            <div class="columna-texto"
+                style="border: 3px solid rgba(162, 89, 255, 0.4); padding: 30px; border-radius: 20px; background: rgba(23, 18, 39, 0.7);">
+                <span class="badge-tag">Manejo del Tiempo</span>
+                <h1>¿Por qué es <span>Importante</span>?</h1>
+                <p>Es una habilidad esencial para cualquier estudiante que desee alcanzar un buen rendimiento.</p>
+
+                <div class="botones-imagenes-vertical">
+                    <button type="button" onclick="mostrarImagen(1)">Misión</button>
+                    <button type="button" onclick="mostrarImagen(2)">Visión</button>
+                    <button type="button" onclick="mostrarImagen(3)">Pregunta Problema</button>
+                    <button type="button" onclick="mostrarImagen(4)">Objetivos generales</button>
+                    <button type="button" onclick="mostrarImagen(5)">Objetivos Específicos</button>
+                    <button type="button" onclick="mostrarImagen(6)">Cronograma</button>
+                    <button type="button" onclick="mostrarImagen(7)"
+                        style="background: rgba(162, 89, 255, 0.3); border-color: #a259ff; font-weight: bold;">Documento
+                        del Proyecto</button>
+                </div>
+            </div>
+
+            <div class="columna-imagen"
+                style="border: 3px solid rgba(162, 89, 255, 0.4); padding: 30px; border-radius: 20px; background: rgba(23, 18, 39, 0.7); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+                <div class="tarjeta-flotante tf-1">
+                    <span class="icono">📌</span>
+                    <div>
+                        <strong>Información</strong>
+                        <p>Proyecto Escolar</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta-flotante tf-2">
+                    <span class="icono">🎯</span>
+                    <div>
+                        <strong>Metas</strong>
+                        <p>Cat Time</p>
+                    </div>
+                </div>
+
+                <img src="AM.png" alt="Modelo 3D del gato" class="img-gato" loading="lazy">
+
+                <div id="contenedor" class="visor-imagenes"
+                    style="border: 2px solid rgba(162, 89, 255, 0.5); border-radius: 12px; overflow: hidden; margin-top: 15px; background: #fff;">
+                    <img id="img1" src="mision.jpeg" alt="Misión" style="display:none; width: 100%;">
+                    <img id="img2" src="vision.jpeg" alt="Visión" style="display:none; width: 100%;">
+                    <img id="img3" src="problrma.jpeg" alt="Pregunta Problema" style="display:none; width: 100%;">
+                    <img id="img4" src="objetivo.jpeg" alt="Objetivos generales" style="display:none; width: 100%;">
+                    <img id="img5" src="general.jpeg" alt="Objetivos Específicos" style="display:none; width: 100%;">
+                    <img id="img6" src="cronograma.jpeg" alt="Cronograma" style="display:none; width: 100%;">
+
+                    <!-- TARJETA PDF DESPLEGABLE -->
+                    <div id="img7"
+                        style="display:none; width: 100%; padding: 20px; background: #171227; text-align: center;">
+                        <div class="tarjeta-pdf">
+                            <div class="icono-pdf">📄</div>
+                            <h3>Documento del proyecto</h3>
+                            <p>Archivo en formato PDF</p>
+                            <div class="botones-pdf">
+                                <a href="documentos/proyecto.pdf" target="_blank" rel="noopener noreferrer"
+                                    class="btn-pdf">
+                                    Ver documento
+                                </a>
+                                <a href="documentos/proyecto.pdf" download class="btn-pdf descargar">
+                                    Descargar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function mostrarImagen(num) {
+            for (let i = 1; i <= 7; i++) {
+                const img = document.getElementById("img" + i);
+                if (img) img.style.display = "none";
+            }
+            const imagenActiva = document.getElementById("img" + num);
+            if (imagenActiva) {
+                imagenActiva.style.display = (num === 7) ? "block" : "block";
+            }
+        }
+
+        const frases = [
+            "✨ \"El éxito es la suma de pequeños esfuerzos repetidos día tras día.\" ✨",
+            "🚀 \"Las matemáticas no son números, ecuaciones o fórmulas; es sobre entender.\" 🚀",
+            "💡 \"Organiza tu tiempo hoy para construir el futuro que deseas mañana.\" 💡",
+            "⭐ \"El único límite a nuestros logros de mañana son nuestras dudas de hoy.\" ⭐",
+            "🎯 \"Cada problema matemático resuelto es una victoria para tu mente.\" 🎯",
+            "🔥 \"La constancia y el esfuerzo vencen al talento cuando el talento no se esfuerza.\" 🔥",
+            "🧠 \"Nunca consideres el estudio como una obligación, sino como una oportunidad.\" 🧠",
+            "💪 \"Un pequeño avance cada día suma grandes resultados al final.\" 💪",
+            "🌟 \"El talento te abre puertas, pero tu disciplina te mantiene en la cima.\" 🌟",
+            "🎮 \"Haz que aprender sea tan divertido como jugar en tu mundo favorito.\" 🎮"
+        ];
+
+        let indiceActual = 0;
+        const elementoFrase = document.getElementById("fraseMotivadora");
+
+        function cambiarFrase() {
+            elementoFrase.style.opacity = 0;
+            setTimeout(() => {
+                indiceActual = (indiceActual + 1) % frases.length;
+                elementoFrase.textContent = frases[indiceActual];
+                elementoFrase.style.opacity = 1;
+            }, 500);
+        }
+
+        setInterval(cambiarFrase, 5000);
+    </script>
+</body>
+
+</html>
